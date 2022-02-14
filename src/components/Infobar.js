@@ -63,7 +63,7 @@ const Infobar = () => {
       params: { date: today() },
       headers: {
         "x-rapidapi-host": "coingecko.p.rapidapi.com",
-        "x-rapidapi-key": "820f545a96msh8877b22e0898111p1b8700jsn9042a3eafde8",
+        "x-rapidapi-key": process.env.RAPID_API_KEY,
       },
     };
 
@@ -89,7 +89,7 @@ const Infobar = () => {
       params: { vs_currency: "usd", days: "7" },
       headers: {
         "x-rapidapi-host": "coingecko.p.rapidapi.com",
-        "x-rapidapi-key": "820f545a96msh8877b22e0898111p1b8700jsn9042a3eafde8",
+        "x-rapidapi-key": process.env.RAPID_API_KEY,
       },
     };
 
@@ -115,7 +115,7 @@ const Infobar = () => {
       },
       headers: {
         "x-rapidapi-host": "coingecko.p.rapidapi.com",
-        "x-rapidapi-key": "820f545a96msh8877b22e0898111p1b8700jsn9042a3eafde8",
+        "x-rapidapi-key": process.env.RAPID_API_KEY,
       },
     };
 
