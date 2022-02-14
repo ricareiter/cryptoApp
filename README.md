@@ -1,3 +1,7 @@
+# CryptoApp
+
+A user interactive dashboard web app that provides data about criptocurrencies
+
 ## Built With
 
 - HTML
