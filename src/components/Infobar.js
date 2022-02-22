@@ -8,12 +8,10 @@ import React, { useState } from "react";
 import {
   AreaChart,
   Area,
-  Cell,
   XAxis,
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
 } from "recharts";
 
@@ -207,7 +205,7 @@ const Infobar = () => {
         </div>
         <div className="stats-1">
           <img className="stats-1-img" src={icon1} />
-          <p className="stats-1-p">Price Change</p>
+          <p className="stats-1-p">Price Change (7d)</p>
           <p className="stats-1-p2">{priceChange}%</p>
         </div>
         <div className="stats-1">
