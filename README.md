@@ -1,6 +1,10 @@
 # CryptoApp
 
-A user interactive dashboard web app that provides data about criptocurrencies
+A user interactive dashboard web app that provides data about criptocurrencies.
+
+## Live Demo
+
+- [Live Demo in Netlify](https://crypto-app-graph.netlify.app/)
 
 ## Built With
 
