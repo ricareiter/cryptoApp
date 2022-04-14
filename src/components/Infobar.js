@@ -28,6 +28,13 @@ const Infobar = () => {
   const [priceChange, setPriceChange] = useState("");
   const [searchError, setSearchError] = useState(false);
 
+  const afterModal = (e) => {
+    e.preventDefault();
+    setSearchCoin(e.target.value);
+    submitCoinSearch();
+    document.querySelector(".overlay").classList.toggle("hidden");
+  };
+
   const today = () => {
     const getDay = new Date();
     const day = ("0" + getDay.getDate()).slice(-2);
@@ -182,6 +189,7 @@ const Infobar = () => {
           <img
             className="search-button-img"
             src={search}
+            alt=""
             onClick={submitCoinSearch}
           />
         </div>
@@ -190,26 +198,26 @@ const Infobar = () => {
         </div>
       </div>
       <div className="coin-icon-display">
-        <img className="img-coin-icon" src={coinIcon} />
+        <img className="img-coin-icon" src={coinIcon} alt="" />
       </div>
       <div className="stats">
         <div className="stats-1">
-          <img className="stats-1-img" src={icon3} />
+          <img className="stats-1-img" src={icon3} alt="" />
           <p className="stats-1-p">Currency</p>
           <p className="stats-1-p2">{symbol}</p>
         </div>
         <div className="stats-1">
-          <img className="stats-1-img" src={icon2} />
+          <img className="stats-1-img" src={icon2} alt="" />
           <p className="stats-1-p">Price</p>
           <p className="stats-1-p2">${coinPrice}</p>
         </div>
         <div className="stats-1">
-          <img className="stats-1-img" src={icon1} />
+          <img className="stats-1-img" src={icon1} alt="" />
           <p className="stats-1-p">Price Change (7d)</p>
           <p className="stats-1-p2">{priceChange}%</p>
         </div>
         <div className="stats-1">
-          <img className="stats-1-img" src={icon4} />
+          <img className="stats-1-img" src={icon4} alt="" />
           <p className="stats-1-p">Market Rank</p>
           <p className="stats-1-p2">{coinRank}</p>
         </div>
@@ -270,6 +278,18 @@ const Infobar = () => {
             <CartesianGrid opacity={0.5} vertical={false} />
           </AreaChart>
         </ResponsiveContainer>
+      </div>
+      <div className="modal overlay">
+        <form className="search-form" onSubmit={afterModal}>
+          <h2 className="heading-secondary">Cryptocurrency Name</h2>
+          <input
+            className="search-input form__group"
+            placeholder="bitcoin"
+            type="text"
+            onChange={coinSearch}
+          />
+          <button className="search-btn btn--green">Search</button>
+        </form>
       </div>
     </div>
   );
