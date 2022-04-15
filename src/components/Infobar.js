@@ -157,7 +157,7 @@ const Infobar = () => {
   let value2 = -1;
 
   function CustomTooltip({ active, payload, label }) {
-    if (active) {
+    if (active && payload !== null) {
       return (
         <div>
           <p>{label}</p>
